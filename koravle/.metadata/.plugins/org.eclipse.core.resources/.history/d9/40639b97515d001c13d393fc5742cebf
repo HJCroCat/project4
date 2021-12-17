@@ -1,0 +1,62 @@
+package com.koravle.domain;
+
+import java.sql.Date;
+
+
+public class UsrVO {
+
+	private int usrIdx;
+	private String usrEmail;
+	private String usrBirth;
+	private String usrNick;
+	private Date usrSince;
+	private String usrID;
+	private String passwd;
+	
+	
+	public int getUsrIdx() {
+		return usrIdx;
+	}
+	public void setUsrIdx(int usrIdx) {
+		this.usrIdx = usrIdx;
+	}
+	public String getUsrEmail() {
+		return usrEmail;
+	}
+	public void setUsrEmail(String usrEmail) {
+		this.usrEmail = usrEmail;
+	}
+	public String getUsrBirth() {
+		return usrBirth;
+	}
+	public void setUsrBirth(String usrBirth) {
+		this.usrBirth = usrBirth;
+	}
+	public String getUsrNick() {
+		return usrNick;
+	}
+	public void setUsrNick(String usrNick) {
+		this.usrNick = usrNick;
+	}
+	public Date getUsrSince() {
+		return usrSince;
+	}
+	public void setUsrSince(Date usrSince) {
+		this.usrSince = usrSince;
+	}
+	public String getUsrID() {
+		return usrID;
+	}
+	public void setUsrID(String usrID) {
+		this.usrID = usrID;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+	
+	
+
+}

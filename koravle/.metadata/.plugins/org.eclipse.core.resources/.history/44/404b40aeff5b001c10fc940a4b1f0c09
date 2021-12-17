@@ -1,0 +1,5 @@
+package com.koreble.domain;
+
+public class BoardVO {
+
+}

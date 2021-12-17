@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\workspace\springWeb\koravle\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+215622906.index
+4254222164.index
+2035459125.index
+3017546279.index
+645329419.index
+2038743879.index
+3912717711.index

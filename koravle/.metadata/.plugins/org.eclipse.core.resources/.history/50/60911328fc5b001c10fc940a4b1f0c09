@@ -1,0 +1,129 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+
+<!-- 부트스트랩 그리드: container > row(줄) > col(열) -->
+    <!-- 1줄은 화면 전체길이, 열은 한 화면에 12등분 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-2 bg-primary">first</div>
+            <div class="col-4 bg-success">second</div>
+            <div class="col-6 bg-primary">third</div>
+
+        </div>
+        
+    <%
+	// 메인 페이지로 이동했을 때 세션에 값이 담겨있는지 체크
+		String usrID = null;
+		if(session.getAttribute("usrID") != null){
+			usrID = (String)session.getAttribute("usrID");
+		}
+	%>
+	
+	<!-- 게시판 메인 페이지 영역 시작 -->
+	
+	<div class="row">
+		<input type="text" class="col-6" name="searchWord" id="searchWord">
+		<select class="col-2" name="selectSearch" id="selectSearch">
+			<option value="1" selected>전체</option>
+			<option value="boardName">글제목</option>
+			<option value="regionName">관광지</option>
+			<option value="boardWriter">작성자</option>
+		</select>
+		<a href="boardList.do" class="col-2">검색</a>
+		<a href="boardWrite.do" class="col-2">글쓰기</a>
+	</div>
+	
+	<div class="row">
+	공백
+	</div>
+	
+	<div class="row">
+		<d class="col-6"> 현재 게시판 명 노출 </d>
+		<%-- <%선택 게시판 별 노출 아이콘  변경 if문 작성 (ex. 자유게시판 -> best, 관광지추천, 코스추천 노출) %> --%>
+		<button class="col-2">best</button>
+		<button class="col-2">관광지추천</button>
+		<button class="col-2">코스추천</button>
+	</div>
+	
+	<div class="row">
+	공백
+	</div>
+	
+	<!-- //전체 게시글의 숫자, 제목을 jsp쪽으로 가져와야함
+    BoardDAO bao = new BoardDAO();
+ 
+    //전체게시글을 리턴 받아주는 소스
+    //(bean이라는 세트 여러개를 한꺼번에 받아오려면 리스트를 써야한다.)
+    Vector<BoardBean> vec = bdao.getAllBoard();
+ 
+    //받아온 데이터를 화면에 출력
+	%> -->
+		
+	<div class="row">
+		<table class="col-12" border="1" bgcolor=skyblue>
+        <tr>
+            <td class="col-2" align="center">번호</td>
+            <td class="col-5" align="center">제목</td>
+            <td class="col-2" align="center">작성자</td>
+            <td class="col-2" align="center">작성일</td>
+            <td class="col-1" align="center">조회수</td>
+        </tr>
+ 
+       <%--
+       
+       <%
+        //데이터 출력
+        for (int i = 0; i < vec.size(); i++) {
+            
+        	//벡터에 저장돼있는 빈클래스를 하나씩 추출
+            BoardBean bean = vec.get(i); 
+            
+            //글번호는 글스텝에 관계없이 부여되는 것이 보기좋으므로 i+1로 출력??
+            //글제목에는 태그를 걸어준다.
+        %> 
+        <tr height="40">
+            <td width="50" align="center"> <%=i+1%> </td>
+            <td width="320" align="left">
+            <%-- <a href="BoardInfo.jsp?num=<%=bean.getNum()%>"> &nbsp;
+            <%=bean.getSubject()%></a></td> 
+            <td width="100" align="center"><%=bean.getWriter()%></td>
+            <td width="150" align="center"><%=bean.getReg_date()%></td>
+            <td width="80" align="center"><%=bean.getReadcount()%></td>
+        </tr>
+	    <% 
+	        }
+	    %>
+    
+    --%>
+	</div>
+			
+	<!-- 게시판 메인 페이지 영역 끝 -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

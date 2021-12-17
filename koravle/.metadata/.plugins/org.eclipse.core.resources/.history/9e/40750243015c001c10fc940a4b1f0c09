@@ -1,0 +1,5 @@
+package com.koreble.service;
+
+public class BoardServiceImpl {
+
+}

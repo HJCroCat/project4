@@ -1,0 +1,18 @@
+package com.koravle.domain;
+
+public class BoardVO {
+	
+	private int boardIdx;
+	private String boardTitle;
+	private String boardContent1;
+	private String boardContent2;
+	private String boardDate;
+	private String boardCat;
+	private String boardType;
+	private String Reco;
+	private String ViewCount;
+	private String Writer;
+	
+	
+}
+

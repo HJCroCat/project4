@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link href="resources/style/stylecss.css" rel="stylesheet">
+<script type="text/javascript" src="resources/js/jquery-1.7.1.js"></script>
+
+</head>
+<body>
+	<div class="boardHeader">
+		게시글 리스트 페이지 입니다.
+	</div>
+		<div>
+			<input type="text" name="searchWord" id="searchWord">
+			<select name="selectSearch" id="selectSearch">
+				<option value="1" selected>전체</option>
+				<option value="boardName">글제목</option>
+				<option value="regionName">관광지</option>
+				<option value="boardWriter">작성자</option>
+			</select>
+			<button href="boardWrite.do" class="btn" style="float: right;">글쓰기</button>
+			<button href="boardList.do" class="btn" style="float: right;">검색</button>
+		</div>
+		<div>
+			<br/>
+			<button class="btn" href="boardList.do" name="boardCourse">코스 추천</button>
+			<button class="btn" href="boardList.do" name="boardRegion">관광지 추천</button>
+			<button class="btn" href="boardList.do" name="boardFree">자유게시판</button>
+			<button class="btn" href="boardList.do" name="boardBest">Best</button>
+		</div>
+		
+	
+	
+	
+
+	<div class="footer">
+	
+	</div>
+	
+<script src="resources//js/jquery.min.js"></script>
+<script src="resources/js/scripts.js"></script>
+
+</body>
+</html>

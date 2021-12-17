@@ -1,0 +1,52 @@
+package com.koreble.domain;
+
+public class BoardVO {
+	
+	private int boardIdx;
+	private String boardName;
+	private String boardData1;
+	private String boardData2;
+	private String boardCate;
+	private String boardType;
+	
+	
+	public int getBoardIdx() {
+		return boardIdx;
+	}
+	public void setBoardIdx(int boardIdx) {
+		this.boardIdx = boardIdx;
+	}
+	public String getBoardName() {
+		return boardName;
+	}
+	public void setBoardName(String boardName) {
+		this.boardName = boardName;
+	}
+	public String getBoardData1() {
+		return boardData1;
+	}
+	public void setBoardData1(String boardData1) {
+		this.boardData1 = boardData1;
+	}
+	public String getBoardData2() {
+		return boardData2;
+	}
+	public void setBoardData2(String boardData2) {
+		this.boardData2 = boardData2;
+	}
+	public String getBoardCate() {
+		return boardCate;
+	}
+	public void setBoardCate(String boardCate) {
+		this.boardCate = boardCate;
+	}
+	public String getBoardType() {
+		return boardType;
+	}
+	public void setBoardType(String boardType) {
+		this.boardType = boardType;
+	}
+	
+	
+}
+

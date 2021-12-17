@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+
+	<insert id="insertBoard" parameterType="BoardVO">
+		INSERT INTO board(
+			boardTitle, boardType, boardCat, boardContent1, boardKeyword
+			<if test="b_fname != null">
+			, b_fname, b_fsize, b_realfname
+			</if>
+			) VALUES (
+			#{boardTitle}, #{boardType}, #{boardCat}, #{boardContent1}, #{boardKeyword}
+			<if test="b_fname != null">
+			, #{b_fname}, #{b_fsize}, #{b_realfname}
+			</if>
+		)
+
+	</insert>
+
+	<!-- boardIdx부분에 1,free,region,course 등의 방식으로 발송하여 글 목록 변경 ajax 구현 필요 -->
+
+	<select id="getBoardList" resultType="BoardVO">
+		<![CDATA[
+		SELECT * FROM board ORDER BY boardIdx DESC
+		]]>
+	</select>
+	
+	<update id="updateBoard"  parameterType="BoardVO">
+		<![CDATA[
+		UPDATE board SET
+		boardtitle = #{boardtitle},
+		b_content = #{boardcontent}
+		WHERE boardid = #{boardid}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard"  parameterType="BoardVO">
+		<![CDATA[
+		DELETE board
+		FROM board
+		WHERE boardid = #{boardid}
+		]]>
+	</delete>
+	
+	<select id="getBoard"  parameterType="BoardVO" resultType="BoardVO">
+		<![CDATA[
+		SELECT *
+		FROM board
+		WHERE boardid = #{boardid}
+		]]>
+	</select>
+	
+	
+	
+</mapper>

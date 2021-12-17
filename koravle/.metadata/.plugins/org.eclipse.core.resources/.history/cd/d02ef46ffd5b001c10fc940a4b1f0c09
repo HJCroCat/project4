@@ -1,0 +1,13 @@
+package com.koreble.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class BoardController {
+	
+	// 호출 페이지 이동
+		@RequestMapping("/{step}.do")
+		public String joinPage(@PathVariable String step) {
+			return "/user/"+step;
+		}
+}

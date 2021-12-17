@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+
+	<insert id="insertBoard" parameterType="BoardVO">
+		INSERT INTO board(
+			boardTitle, boardType, boardCat, boardContent1, boardKeyword, boardWriter
+			<if test="b_fname != null">
+			, b_fname, b_fsize, b_realfname
+			</if>
+			) VALUES (
+			#{boardTitle}, #{boardType}, #{boardCat}, #{boardContent1}, #{boardKeyword}, #{boardWriter}
+			<if test="b_fname != null">
+			, #{b_fname}, #{b_fsize}, #{b_realfname}
+			</if>
+		)
+
+	</insert>
+
+	<!-- listF-1 ~ listE 번째 까지의 데이터 추출 -->
+	<!-- where 조건문의 데이터 추출 -->
+
+	<select id="getBoardList" resultType="BoardVO">
+	
+		SELECT * FROM board
+		<where>		
+		<if test="boardType != null">
+			boardCat = #{boardCat}
+		</if>
+		</where>
+		ORDER BY boardIdx DESC LIMIT
+		#{listF}, #{listE};
+	</select>
+	
+	<update id="updateBoard"  parameterType="BoardVO">
+		<![CDATA[
+		UPDATE board SET
+		boardTitle = #{boardTitle},
+		boardContent1 = #{boardContent1},
+		boardKeyword = #{boardKeyword},
+		boardType = #{boardType}
+		WHERE boardIdx = #{boardIdx}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard"  parameterType="BoardVO">
+		<![CDATA[
+		DELETE board
+		FROM board
+		WHERE boardIdx = #{boardIdx}
+		]]>
+	</delete>
+	
+	<select id="getBoard"  parameterType="BoardVO" resultType="BoardVO">
+		<![CDATA[
+		SELECT *
+		FROM board
+		WHERE boardIdx = #{boardIdx}
+		]]>
+	</select>
+	
+	
+	
+</mapper>

@@ -1,0 +1,26 @@
+.boardHeader{
+	height:80px;
+}
+
+.btn{
+	float: left;
+	max-width:100px;
+	min-width:70px;
+	height: 25px;
+}
+
+#searchWord{
+	float: left;
+	width: 35%;
+	margin-left:5%;
+	margin-right:2%;
+	max-width:300px;
+}
+
+#selectSearch{
+	float: left;
+	width: 10%;
+	margin-right:5%;
+	max-width:80px;
+}
+

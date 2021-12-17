@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* 기본 밑줄을 제거합니다 */
+    color: #888;
+}
+  
+a:hover {
+  text-decoration: underline; /* 마우스 커서가 올라갔을 때 밑줄을 생성합니다*/
+}
+
+header {
+    margin: auto; /* header의 양쪽 여백(margin)을 동등하게 맞춤 -> 수평가운데정렬 */
+    width: 1080px;
+    background: lightgray;
+	height: 215px;
+    display: flex;
+    align-items: center; /* 하위 요소들 수직 가운데정렬 */
+    position: relative;
+}
+
+main{
+	min-height: 700px;
+}
+
+footer{
+	background: darkgray;
+	height: 310px;
+}
+
+
+
+
+
+
+
+.boardHeader{
+	height:80px;
+}
+
+.btn{
+	max-width:100px;
+	min-width:70px;
+	height: 22px;
+}
+
+#searchWord{
+	float: left;
+	width: 35%;
+	margin-left:5%;
+	margin-right:2%;
+	max-width:300px;
+}
+
+#selectSearch{
+	float: left;
+	width: 10%;
+	margin-right:5%;
+	max-width:80px;
+}
+

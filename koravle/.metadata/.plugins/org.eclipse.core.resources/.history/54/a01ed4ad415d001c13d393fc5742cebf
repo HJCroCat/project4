@@ -1,0 +1,9 @@
+package com.koreble.service;
+
+import com.koravle.domain.UsrVO;
+
+public interface UsrService {
+	public UsrVO idCheck_Login( UsrVO vo);
+	public int userInsert(UsrVO vo);
+
+}

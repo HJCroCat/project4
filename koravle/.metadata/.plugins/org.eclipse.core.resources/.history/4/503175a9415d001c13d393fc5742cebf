@@ -1,0 +1,34 @@
+package com.koravle.dao;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.koreble.domain.UsrVO;
+
+@Repository("UsrDAO")
+public class UsrDAOImpl implements UsrDAO{
+
+	@Autowired
+	private SqlSessionTemplate mybatis;
+	
+	@Override
+	public UsrVO idCheck(UsrVO vo) {
+		System.out.println("===> UsrMapper idCheck 호출");
+		return mybatis.selectOne("user.idCheck", vo);
+	}
+
+	@Override
+	public int usrInsert(UsrVO vo) {
+		System.out.println("===>  UsrMapper userInsert() 호출");
+		return mybatis.insert("user.userInsert", vo);
+	}
+
+	@Override
+	public UsrVO usrLogin(UsrVO vo) {
+		System.out.println("===> UsrMapper idCheck 호출");
+		return mybatis.selectOne("user.idCheck", vo);
+	}
+
+
+}

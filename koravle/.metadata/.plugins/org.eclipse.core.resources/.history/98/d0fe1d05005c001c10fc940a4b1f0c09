@@ -1,0 +1,6 @@
+package com.koreble.dao;
+
+public interface BoardDAO {
+		
+
+}

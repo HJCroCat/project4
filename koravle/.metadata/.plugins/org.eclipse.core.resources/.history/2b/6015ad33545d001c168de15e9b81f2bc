@@ -1,0 +1,82 @@
+package com.koravle.domain;
+
+public class BoardVO {
+	
+	private int boardIdx;
+	private String boardTitle;
+	private String boardContent1;
+	private String boardContent2;
+	private String boardDate;
+	private String boardCat;
+	private String boardType;
+	private String Reco;
+	private String ViewCount;
+	private String boardWriter;
+	
+	
+	
+	public int getBoardIdx() {
+		return boardIdx;
+	}
+	public void setBoardIdx(int boardIdx) {
+		this.boardIdx = boardIdx;
+	}
+	public String getBoardTitle() {
+		return boardTitle;
+	}
+	public void setBoardTitle(String boardTitle) {
+		this.boardTitle = boardTitle;
+	}
+	public String getBoardContent1() {
+		return boardContent1;
+	}
+	public void setBoardContent1(String boardContent1) {
+		this.boardContent1 = boardContent1;
+	}
+	public String getBoardContent2() {
+		return boardContent2;
+	}
+	public void setBoardContent2(String boardContent2) {
+		this.boardContent2 = boardContent2;
+	}
+	public String getBoardDate() {
+		return boardDate;
+	}
+	public void setBoardDate(String boardDate) {
+		this.boardDate = boardDate;
+	}
+	public String getBoardCat() {
+		return boardCat;
+	}
+	public void setBoardCat(String boardCat) {
+		this.boardCat = boardCat;
+	}
+	public String getBoardType() {
+		return boardType;
+	}
+	public void setBoardType(String boardType) {
+		this.boardType = boardType;
+	}
+	public String getReco() {
+		return Reco;
+	}
+	public void setReco(String reco) {
+		Reco = reco;
+	}
+	public String getViewCount() {
+		return ViewCount;
+	}
+	public void setViewCount(String viewCount) {
+		ViewCount = viewCount;
+	}
+	public String getWriter() {
+		return boardWriter;
+	}
+	public void setWriter(String writer) {
+		boardWriter = writer;
+	}
+	
+	
+	
+}
+

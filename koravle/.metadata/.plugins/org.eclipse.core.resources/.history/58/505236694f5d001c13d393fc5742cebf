@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>
+	Hello world!
+</h1>
+
+<p> <a href='user/userLogin.do'>로그인</a> </p>
+<p> <a href='user/userJoin.do'>회원가입</a></p>
+
+<p> <a href="board/boardList.do">게시판 메인</a>
+<p> <a href="board/boardRead.do">글 읽기</a>
+<p> <a href="board/boardWrite.do">글 쓰기</a>
+
+
+</body>
+</html>

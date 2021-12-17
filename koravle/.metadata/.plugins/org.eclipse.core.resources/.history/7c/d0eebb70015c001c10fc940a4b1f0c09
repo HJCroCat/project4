@@ -1,0 +1,8 @@
+package com.koreble.dao;
+
+import org.springframework.stereotype.Repository;
+
+@Repository("BoardDAO")
+public class BoardDAOImpl implements BoardDAO {
+	
+}
